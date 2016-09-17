@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Inheritance</title>
+</head>
+<script>
+window.onload = function() {
+	function product(){
+		this.type = "Smart Phone";
+		this.make = "Apple";
+	}
+	function anotherProduct(edition,cost){
+		this.edition = edition;
+		this.cost = cost;
+	}
+	var p = new anotherProduct("iPhone7","$800");
+	var para = document.getElementById("para");
+	para.innerHTML = "<h4>"+"Without Inheritance:"+"</h4>";
+	var para1 = document.getElementById("para1");
+	para1.innerHTML = "<h4>"+"With Inheritance:"+"</h4>";
+	for (var i in p)
+	para.innerHTML += p[i]+"<br />"; 
+	anotherProduct.prototype = new product();
+	var apple = new anotherProduct("iPhone6S","$600");
+	for(var i in apple)
+		para1.innerHTML += apple[i]+"<br />";	
+ 
+}
+
+</script>
+<body>
+
+<p id="para"></p>
+<p id="para1"></p>
+
+</body>
+</html>

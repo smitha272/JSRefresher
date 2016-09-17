@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Type Conversion</title>
+</head>
+<script>
+	function typeConvert()
+	{
+		
+		//alert("inside tc");
+		var n = Number(document.getElementById("num").value);
+		var c = n.toString();
+		console.log(n);
+		console.log(c);
+		var op1 = document.getElementById("noConvert");
+		var op2 = document.getElementById("yesConvert");
+		var addNumber = n+2;
+		console.log(addNumber);
+		op1.innerHTML = "Addition of 2 to the input with number type coversion: "+ addNumber;
+		var addString = c+2;
+		console.log(addString);
+		op2.innerHTML = "Addition of 2 to the input without type coversion: "+addString;
+	}
+</script>
+<body>
+	<p>Enter a Number</p>
+	<input type="number" id="num">
+	<input type="button" onclick="typeConvert()" value="seeDifference">
+	<div id="noConvert">
+	
+	</div>
+	<div id="yesConvert">
+	
+	</div>
+</body>
+</html>

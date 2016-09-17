@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Function</title>
+</head>
+<script>
+
+	function evenFunction()
+	{
+		var area = document.getElementById("disparea");
+		area.innerHTML = "Even Numbers"+"<br />";
+		for(var x=2;x<100;x++)
+		{
+			if(x%2==0)
+			{
+				area.innerHTML +=x+"<br />";	
+			}
+		}
+	}
+	function oddFunction()
+	{
+		var area = document.getElementById("disparea");
+		area.innerHTML = "Odd Numbers"+"<br />";
+		for(var x=1;x<100;x++)
+		{
+			if(x%2!=0)
+			{
+				area.innerHTML += x+"<br/>";
+				//area.innerHTML += "<tr>"+x+"</tr>";	
+			}
+		}
+	}
+</script>
+<body>
+	 <input type="button" onclick="evenFunction()" value="generateEvenNumbers">
+	 <input type="button" onclick="oddFunction()" value="generateOddNumbers">
+	 <div id="disparea">
+	 	
+	 </div>
+</body>
+</html>

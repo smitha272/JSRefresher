@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Leap Year</title>
+</head>
+<script>
+	function leap()
+	{
+		//alert("in leap");
+		var i = document.getElementById("input").value;
+		console.log(i);
+		var t = document.getElementById("tell");
+		if(i%4 == 0)
+			t.innerHTML = "You were born on a leap year!";
+		else
+			t.innerHTML = "You were not born on a leap year!";
+	}
+</script>
+<body>
+	<p>Enter your year of birth</p>
+	<input type ="number" id="input" pattern="/^(19|2[0-1])\d{2}$/">
+	<input type="button" value="find out!" onclick="leap()">
+	<div id="tell">
+	
+	</div>
+</body>
+</html>

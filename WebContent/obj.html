@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Book Bucketlist</title>
+</head>
+<script>
+	function createObj()
+	{
+		var book = document.getElementById("book");
+		var auth = document.getElementById("auth");
+		var error = document.getElementById("err");
+		var bl = document.getElementById("booklist");
+		if(book.value !="" && auth.value!="")
+		{
+			var favbook = new Object();
+			favbook.auth = auth.value;
+			favbook.book = book.value;
+			console.log(favbook.auth);
+			console.log(favbook.book);
+			error.innerHTML = "";
+			
+			bl.innerHTML += "<strong>"+"Book:"+"</strong>" +favbook.book+"<strong>" +" Author: " + "</strong>"+favbook.auth +"<br />";
+			
+			/*var textInElem = document.createTextNode("Book:"+ favbook.book + " Author: " + favbook.auth);
+			var elem = document.createElement("h3");
+			elem.appendChild(textInElem);
+			document.getElementById("booklist").appendChild(elem);*/
+			book.value = "";
+			auth.value = "";
+		}
+		else
+		{
+			document.getElementById("err").innerHTML= "Input fields seem to be empty.";		
+		}
+			
+	}
+
+</script>
+<body>
+	<label>Book:</label><input type="text" id="book" placeholder="Enter the book name">
+	<label>Author:</label><input type="text" id="auth" placeholder="Enter the author name">
+	<input type="button" value="submit" onclick="createObj()" id="button">
+<p id="err"></p>
+<p id="favbook"><strong>Book BucketList</strong></p>
+<div id="booklist">
+
+</div>
+</body>
+</html>

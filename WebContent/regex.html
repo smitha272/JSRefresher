@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>zipcode check</title>
+</head>
+<script>
+	function check(){
+		var input = document.getElementById("in");
+		var tmp = input.value;
+		var exp = /^[0-9].{4}$/;
+		var correct = exp.exec(tmp);
+		if(correct!="" && correct!=null)
+			alert("Its a valid zipcode");
+		else
+			alert("Enter correct zipcode");
+		
+	}
+
+
+</script>
+
+<body>
+<div>
+	<p><span>Enter your 5 digit US zipcode</span></p>
+	<input type="text" id="in" >
+	<input type="button" id="button" value="submit" onclick="check()">
+</div>
+
+</body>
+</html>

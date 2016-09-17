@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Error Handling</title>
+</head>
+<script>
+	function errors()
+	{
+		var m = document.getElementById("message");
+		m.innerHTML = "";
+		var x = document.getElementById("input").value;
+		try{
+			if(x=="") throw "Error - Input Empty.Please enter the age to check validity";
+			x = Number(x);
+			if(x<18) throw "age should be more than 18";
+			if(x>100) throw "Long Life huh!";
+		}
+		catch(err)
+		{
+			m.innerHTML = err;
+		}
+		
+		
+	}
+</script>
+<body>
+<p id="message"></p>
+<input type = "text" id="input" placeholder="age">
+<input type="button" value="Check" onclick=errors()>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Strict Mode</title>
+</head>
+<script>
+
+function withStrict()
+{
+	"use strict"
+	
+	var op = document.getElementById("output1");
+	try{
+		x=0;
+		op.innerHTML = "value of x is: "+x;	
+	}
+	catch(err){
+		op.innerHTML = err.message;
+	}
+	
+	
+	
+}
+function withoutStrict()
+{
+	y=0;
+	var op1 = document.getElementById("output2");
+	op1.innerHTML = "value of y is: " + y;
+}
+</script>
+
+<body>
+	<input type="button" onclick="withStrict()" value="print x">
+	<input type="button" onclick="withoutStrict()" value="print y">
+	<div id="output1">
+	
+	</div>
+	<div id="output2">
+		
+	</div>
+</body>
+</html>

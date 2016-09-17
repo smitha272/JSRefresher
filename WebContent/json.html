@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>json strings</title>
+</head>
+<script>
+	function convertJSON()
+	{
+		var obj = {};
+		obj["name"] = document.getElementById("name").value;
+		obj["department"] = document.getElementById("department").value;
+		document.getElementById("converted").innerHTML += JSON.stringify(obj)+"<br />";
+	}
+</script>
+<body>
+	<form id="form1">
+	<div>
+		<input type="text" id="name" placeholder="Enter name">
+		<input type="text" id="department" placeholder="Enter department">
+		<input type="button" id="button" value="JSON" onclick="convertJSON()">
+	</div>
+	</form>
+	<div id="converted">
+	</div>
+</body>
+</html>
